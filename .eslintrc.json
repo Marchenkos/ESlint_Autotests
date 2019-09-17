@@ -22,11 +22,18 @@
     ],
     "rules": {
         "no-console":"off",
+        "semi-spacing": ["error", {"before": false, "after": true}],
+        "quotes": ["error", "double"],
         "no-plusplus":"off",
-        "no-unused-vars":"warn",
+        "no-unused-vars":"off",
         "max-classes-per-file":"off", 
-        "prefer-rest-params":"warn", 
-        "eqeqeq":"warn",
-        "no-restricted-syntax": "off"
+        "prefer-rest-params":"off", 
+        "eqeqeq":"off",
+        "no-restricted-syntax": "off",
+        "indent":["error", 4],
+        "no-trailing-spaces":"error",
+        "keyword-spacing":["error", { "overrides": { "if": { "after": true, "before":true}, "for": { "after": true }, "while": { "after": true } } }],
+        "no-var":"error",
+        "import/prefer-default-export":"off"
     }
 }
