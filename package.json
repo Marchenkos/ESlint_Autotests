@@ -1,0 +1,37 @@
+{
+  "name": "Task_ESlint_Autotests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js_lib.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marchenkos/Task_ESlint_Autotests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marchenkos/Task_ESlint_Autotests/issues"
+  },
+  "homepage": "https://github.com/Marchenkos/Task_ESlint_Autotests#readme",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
