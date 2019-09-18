@@ -1,4 +1,4 @@
-class Shape {
+export class Shape {
     constructor(name) {
         this.name = name;
     }
@@ -7,7 +7,7 @@ class Shape {
     }
 }
 
-class Rectangle extends Shape {
+export class Rectangle extends Shape {
     constructor(height, width) {
         super("Rectangle");
         this.height = height;
@@ -30,18 +30,19 @@ export class Square extends Shape {
     }
 }
 
-class Circle extends Shape {
+export class Circle extends Shape {
     constructor(radius) {
         super("Circle");
         this.radius = radius;
     }
+
 
     calculateArea() {
         return 3.14 * this.radius * this.radius;
     }
 }
 
-class ShapesStore extends Shape {
+export class ShapesStore extends Shape {
     constructor(shapesArray) {
         super();
         this.shapesArray = shapesArray;

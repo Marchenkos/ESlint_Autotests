@@ -1,14 +1,4 @@
-export function pureFunction(a1, a2, a3, a4, a5, a6) {
-    let sum = 0;
-    const params = [a1, a2, a3, a4, a5, a6];
-    for (const arg of params) {
-        sum += arg;
-    }
-
-    return sum * 10;
-}
-
-function applyPartial(action) {
+export function applyPartial(action) {
     const firstArguments = Array.prototype.slice.call(arguments, 1);
 
     return (...args) => action.apply(this, [...firstArguments, ...args]);
@@ -30,7 +20,7 @@ export function curry(action) {
     };
 }
 
-function memoize(action) {
+export function memoize(action) {
     const cacheValues = new Map();
 
     return (...args) => {
@@ -48,30 +38,6 @@ function memoize(action) {
 
         return result;
     };
-}
-
-function multiplicationOfParameters() {
-    return (...args) => {
-        let result = 1;
-
-        for (let i = 0; i < args.length; i++) {
-            result *= args[i];
-        }
-
-        return result;
-    };
-}
-
-function forLazy(arrayPar, n) {
-    const newArray = [];
-
-    for (const key of arrayPar) {
-        if (key > n) {
-            newArray.push(key);
-        }
-    }
-
-    return newArray;
 }
 
 export function lazy(action) {

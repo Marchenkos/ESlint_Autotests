@@ -1,10 +1,10 @@
-import { lazy } from "../src/functional_programming";
+import { memoize } from "../src/functional_programming";
 
 const { describe, test, expect } = global;
 
-describe("Lazy function", () => {
+describe("Memoized function", () => {
     test("it should return the same result as a action in agrument", () => {
-        function forLazy(data) {
+        function input(data) {
             const newArray = [];
 
             for (let i = 0; i < data.length; i++) {
@@ -16,8 +16,8 @@ describe("Lazy function", () => {
             return newArray;
         }
 
-        const array = [2, 5, 8];
+        const expectedOutput = [4];
 
-        expect(lazy(forLazy, array)()).toEqual(forLazy(array));
+        expect(memoize(input)([1, 2, 3, 4])).toEqual(expectedOutput);
     });
 });

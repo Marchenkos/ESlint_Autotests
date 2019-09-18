@@ -1,19 +1,19 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
     entry: {
-        app: ["./src/classes", "./src/functions_array", "./src/functional_programming"]
+        app: ["./src/classes", "./src/functions_array", "./src/functional_programming"],
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, "dist"),
         filename: "[name].js",
-        publicPath: '/dist'
+        publicPath: "/dist",
     },
     module: {
         rules: [{
-            test : /\.js$/,
-            exclude: '/node_modules/',
-            use: ["babel-loader", "eslint-loader"]
-        }]
-    }
-}
+            test: /\.js$/,
+            exclude: "/node_modules/",
+            use: ["babel-loader", "eslint-loader"],
+        }],
+    },
+};

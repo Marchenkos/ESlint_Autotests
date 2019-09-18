@@ -1,30 +1,26 @@
-import { Square } from '../src/classes'
+import { ShapesStore, Rectangle, Square } from "../src/classes";
 
-describe("Circle area function", () => {
-    test("it should return the area of the square, for which the side is number", () => {
-        let side = 6;
-        let expectedOutput = 36;
+const { describe, test, expect } = global;
 
-        const shape = new Square(side);
+describe("Method for calculating a common area of shapes", () => {
+    test("it should return a common area of the squares", () => {
+        const shape = new Square(8);
+        const shape2 = new Square(6);
+        const shape3 = new Square(5);
+        const shape4 = new Rectangle(2, 8);
+        const shape5 = new Rectangle(5, 10);
 
-        expect(shape.calculateArea()).toEqual(expectedOutput);
+        const expectedOutput = 191;
+
+        const shapesStore = new ShapesStore([shape, shape2, shape3, shape5, shape4]);
+
+        expect(shapesStore.calculateArea()).toEqual(expectedOutput);
     });
+    test("it should return zero", () => {
+        const expectedOutput = 0;
 
-    test("it should return the area of the square, for which the side is null", () => {
-        let side = null;
-        let expectedOutput = 0;
+        const shapesStore = new ShapesStore([]);
 
-        const shape = new Square(side);
-
-        expect(shape.calculateArea()).toEqual(expectedOutput);
-    });
-
-    test("it should return the area of the square, for which the side is underfined", () => {
-        let side;
-        let expectedOutput = NaN;
-
-        const shape = new Square(side);
-
-        expect(shape.calculateArea()).toEqual(expectedOutput);
+        expect(shapesStore.calculateArea()).toEqual(expectedOutput);
     });
 });

@@ -1,7 +1,16 @@
-{
+{    
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
     "env": {
         "browser": true,
         "commonjs": true,
+        "node": true,
+        "jest": true,
         "es6": true
     },
     "extends": [
@@ -10,12 +19,6 @@
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018
     },
     "plugins": [
         "react"
@@ -34,6 +37,7 @@
         "no-trailing-spaces":"error",
         "keyword-spacing":["error", { "overrides": { "if": { "after": true, "before":true}, "for": { "after": true }, "while": { "after": true } } }],
         "no-var":"error",
-        "import/prefer-default-export":"off"
+        "import/prefer-default-export":"off",
+        "max-len":["error", 150]
     }
 }

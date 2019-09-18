@@ -8,7 +8,7 @@ export function folding(array, foldCallback, accumulator = 0) {
     return result;
 }
 
-function map(array, callback) {
+export function map(array, callback) {
     return folding(array, (element, accumulator) => {
         accumulator.push(callback(element));
 
@@ -16,7 +16,7 @@ function map(array, callback) {
     }, []);
 }
 
-function filter(array, callback) {
+export function filter(array, callback) {
     return folding(array, (element, accumulator) => {
         if (callback(element)) {
             accumulator.push(element);
