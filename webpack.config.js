@@ -1,9 +1,8 @@
 const path = require("path");
+const glob = require("glob");
 
 module.exports = {
-    entry: {
-        app: ["./src/classes", "./src/functions_array", "./src/functional_programming"],
-    },
+    entry: glob.sync("./src/*.js"),
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].js",

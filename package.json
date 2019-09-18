@@ -48,6 +48,8 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "jest": "^24.9.0"
+    "glob": "^7.1.4",
+    "jest": "^24.9.0",
+    "save": "^2.4.0"
   }
 }
