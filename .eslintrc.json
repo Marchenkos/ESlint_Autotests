@@ -38,6 +38,7 @@
         "keyword-spacing":["error", { "overrides": { "if": { "after": true, "before":true}, "for": { "after": true }, "while": { "after": true } } }],
         "no-var":"error",
         "import/prefer-default-export":"off",
-        "max-len":["error", 150]
+        "max-len":["error", 150],
+        "linebreak-style": ["error", "windows"]
     }
 }
