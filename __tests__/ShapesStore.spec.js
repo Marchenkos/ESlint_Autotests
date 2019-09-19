@@ -4,13 +4,12 @@ const { describe, test, expect } = global;
 
 describe("Method for calculating a common area of shapes", () => {
     test("it should return a common area of the squares", () => {
-        const shape = new Square(8);
-        const shape2 = new Square(6);
-        const shape3 = new Square(5);
-        const shape4 = new Rectangle(2, 8);
-        const shape5 = new Rectangle(5, 10);
-        const expectedOutput = shape.calculateArea() + shape2.calculateArea() + shape3.calculateArea() + shape4.calculateArea() + shape5.calculateArea();
-        const shapesStore = new ShapesStore([shape, shape2, shape3, shape5, shape4]);
+        const input = [new Square(8), new Square(6), new Square(5), new Rectangle(2, 8), new Rectangle(5, 10)];
+        const shapesStore = new ShapesStore(input);
+        let expectedOutput = 0;
+        for (let i = 0; i < input.length; i++) {
+            expectedOutput += input[i].calculateArea();
+        }
 
         expect(shapesStore.calculateArea()).toEqual(expectedOutput);
     });
