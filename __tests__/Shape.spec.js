@@ -5,9 +5,8 @@ const { describe, test, expect } = global;
 describe("Class Shape", () => {
     test("it should create new object", () => {
         const name = "Shape";
-
         const shape = new Shape(name);
 
-        expect(shape).toEqual({ name: "Shape" });
+        expect(shape).toContainValue(name);
     });
 });

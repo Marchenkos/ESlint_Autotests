@@ -9,18 +9,14 @@ describe("Method for calculating a common area of shapes", () => {
         const shape3 = new Square(5);
         const shape4 = new Rectangle(2, 8);
         const shape5 = new Rectangle(5, 10);
-
-        const expectedOutput = 191;
-
+        const expectedOutput = shape.calculateArea() + shape2.calculateArea() + shape3.calculateArea() + shape4.calculateArea() + shape5.calculateArea();
         const shapesStore = new ShapesStore([shape, shape2, shape3, shape5, shape4]);
 
         expect(shapesStore.calculateArea()).toEqual(expectedOutput);
     });
     test("it should return zero", () => {
-        const expectedOutput = 0;
-
         const shapesStore = new ShapesStore([]);
 
-        expect(shapesStore.calculateArea()).toEqual(expectedOutput);
+        expect(shapesStore.calculateArea()).toEqual(0);
     });
 });

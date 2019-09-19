@@ -6,7 +6,11 @@ describe("Folding function", () => {
     test("it should call a callback for each element of the non-empty numeric array and change it", () => {
         const input = [2, 2, 8];
         const callback = (a, b) => a + b;
-        const expectedOutput = 12;
+        let expectedOutput = 0;
+
+        for (let i = 0; i < input.length; i++) {
+            expectedOutput = callback(expectedOutput, input[i]);
+        }
 
         expect(folding(input, callback, 0)).toEqual(expectedOutput);
     });
@@ -14,8 +18,7 @@ describe("Folding function", () => {
     test("it should call a callback for each element of the empty array and return zero", () => {
         const input = [];
         const callback = (a, b) => a + b;
-        const expectedOutput = 0;
 
-        expect(folding(input, callback, 0)).toEqual(expectedOutput);
+        expect(folding(input, callback, 0)).toEqual(0);
     });
 });

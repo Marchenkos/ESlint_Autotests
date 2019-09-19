@@ -5,6 +5,7 @@ const { describe, test, expect } = global;
 function pureFunction(a1, a2, a3, a4, a5, a6) {
     let sum = 0;
     const params = [a1, a2, a3, a4, a5, a6];
+
     for (const arg of params) {
         sum += arg;
     }

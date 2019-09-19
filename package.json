@@ -1,5 +1,5 @@
 {
-  "name": "Task_ESlint_Autotests",
+  "name": "js-library-autotests",
   "version": "1.0.0",
   "description": "",
   "main": "js_lib.js",
@@ -17,6 +17,9 @@
     "moduleFileExtensions": [
       "js",
       "json"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-extended"
     ]
   },
   "repository": {
@@ -43,6 +46,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "jest-extended": "^0.11.2",
     "path": "^0.12.7",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
